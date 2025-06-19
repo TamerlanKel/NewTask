@@ -120,7 +120,6 @@ def main():
     if args.aggregate:
         aggregation_result = aggregate_data(filtered_data, header, args.aggregate)
         if aggregation_result:
-            # Prepare for tabulate output
             agg_header = [list(aggregation_result.keys())[0]]
             agg_row = [list(aggregation_result.values())[0]]
             print(tabulate([agg_row], headers=agg_header, tablefmt="pipe"))
